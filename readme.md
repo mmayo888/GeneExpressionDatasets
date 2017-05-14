@@ -1,5 +1,7 @@
 # Datasets
 Source: https://www.ncbi.nlm.nih.gov/sites/GDSbrowser
+Class prediction datasets used in
+Arnav Kapur, Kshitij Marwah and Gil Alterovitz. Gene expression prediction using low-rank matrix completion. BMC Bioinformatics 2016, 17:243.
 
 ## Classification
 Datasets | GEO Dataset ID | #Examples | #Features | #Classes | Citation
