@@ -1,9 +1,12 @@
 # Datasets
 Source: https://www.ncbi.nlm.nih.gov/sites/GDSbrowser
+
+
+
+## Classification
 Class prediction datasets used in
 Arnav Kapur, Kshitij Marwah and Gil Alterovitz. Gene expression prediction using low-rank matrix completion. BMC Bioinformatics 2016, 17:243.
 
-## Classification
 Datasets | GEO Dataset ID | #Examples | #Features | #Classes | Citation
 ---------|----------------|-----------|-----------|----------|---------
 lung     | GDS3257        | 107 | 22283| 2 (49,58)|Landi MT, Dracheva T, Rotunno M, Figueroa JD et al. Gene expression signature of cigarette smoking and its role in lung adenocarcinoma development and survival. PLoS One 2008 Feb 20;3(2):e1651. PMID: 18297132
