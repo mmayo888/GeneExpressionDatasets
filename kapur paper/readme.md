@@ -1,7 +1,7 @@
 # Datasets
 Source: https://www.ncbi.nlm.nih.gov/sites/GDSbrowser
 
-
+Note: these datasets have not been preprocessed using the normalisation strategies described in the paper.
 
 ## Classification
 Class prediction datasets used in

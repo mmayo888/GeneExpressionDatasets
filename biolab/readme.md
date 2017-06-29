@@ -1,5 +1,5 @@
 # Datasets
-Source: These datasets are supplementary material from the paper here:
+These datasets are supplementary material from the paper here:
 http://www.biolab.si/supp/bi-cancer/
 
 The datasets came from here:
