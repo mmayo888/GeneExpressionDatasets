@@ -2,9 +2,16 @@ library(foreign)
 library(plyr)
 
 convert <- function(tab_file){
-  # Read in the tab file, skipping the first two lines
+  # Read in the first line of the tab file, which is the attribute name
+  header<-read.csv(paste("tab/", tab_file,".tab",sep=""),
+                   sep="\t",blank.lines.skip=TRUE,nrows=1,header=FALSE)
+  # Read in the tab file, skipping the first two lineswhich are the attribute names
+  # and the types
   data<-read.csv(paste("tab/", tab_file,".tab",sep=""),
                  sep="\t",skip=2,blank.lines.skip=TRUE)
+  # Munge the header and the data
+  for (i in 1:ncol(data)) 
+    colnames(data)[i]=paste("a",i,"_",as.character(header[1,i]),sep="")
   # Eliminate rows with NAs, which is mainly to get rid of the last blank line
   # in the data
   data<-data[complete.cases(data),]
@@ -18,11 +25,12 @@ convert <- function(tab_file){
     # Move the class to the end
     data<-data[,c(2:(ncol(data)),1)]
   }
+  # debug just before the arff file
+  #print(dim(data))
+  #print(data[1:3,1:3])
   # Save the arff file
-  write.arff(data,paste("arff/",tab_file,".arff",sep=""),relation=tab_file)
-  # Report
-  cat(tab_file,"\t",dim(data),"\n")
-  print(count(data[,ncol(data)]))
+  filename=paste("arff/",tab_file,".arff",sep="")
+  write.arff(data,filename,relation=tab_file)
 }
 
 # The six main datasets
